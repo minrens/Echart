@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据可视化项目</title>
+  <link rel="stylesheet" href="fonts/icomoon.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- 引入echarts.min.js -->
+  <script src="js/echarts.min.js"></script>
+  <script src="js/flexible.js"></script>
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 父容器大盒子 -->
+  <div class="viewport">
+    <div class="column">
+      <!-- 概览区域模块制作 -->
+      <div class="panel overview">
+        <div class="inner">
+          <ul>
+            <li>
+              <h4>131,780</h4>
+              <span>
+                <i class="icon-clock" style="color: #ff1100d0"></i>
+                累计
+              </span>
+            </li>
+            <li class="item">
+              <h4>5,325</h4>
+              <span>
+                <i class="icon-clock" style="color: #ee280e"></i>
+                现有
+              </span>
+            </li>
+            <li>
+              <h4>232</h4>
+              <span>
+                <i class="icon-up" style="color: #e9190a"></i>
+                新增
+              </span>
+            </li>
+            <li>
+              <h4>120,756</h4>
+              <span>
+                <i class="icon-clock" style="color: #0fca47"></i>
+                治愈
+              </span>
+            </li>
+            <li>
+              <h4>5,699</h4>
+              <span>
+                <i class="icon-clock" style="color: #ed3f35"></i>
+                死亡
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 监控区域模块制作 -->
+      <div class="panel monitor">
+        <div class="inner">
+          <div class="tabs">
+            <a href="javascript:;">疫情实时数据</a>
+            <a href="javascript:;">治愈死亡数据</a>
+          </div>
+          <div class="content" style="display: block;">
+            <div class="head">
+              <span class="col">时间</span>
+              <span class="col">地区</span>
+              <span class="col">新增</span>
+              <span class="col">现有</span>
+              <span class="col">累计</span>
+            </div>
+            <div class="marquee-view">
+              <div class="marquee">
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">台湾</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">陕西</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">浙江</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">广西</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">香港</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">上海</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">广东</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">云南</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">福建</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">天津</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="head">
+              <span class="col">时间</span>
+              <span class="col">地区</span>
+              <span class="col">累计</span>
+              <span class="col">治愈</span>
+              <span class="col">确诊</span>
+            </div>
+            <div class="marquee-view">
+              <div class="marquee">
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">台湾</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">陕西</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">浙江</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">广西</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">香港</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">上海</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">广东</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">云南</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">福建</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">天津</span>
+                  <span class="col">165</span>
+                  <span class="col">1315</span>
+                  <span class="col">2044</span>
+                </div>
+                <div class="row">
+                  <span class="col">21/12/31</span>
+                  <span class="col">四川</span>
+                  <span class="col">0</span>
+                  <span class="col">72</span>
+                  <span class="col">1186</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 点位分布统计模块制作 -->
+      <div class="point panel">
+        <div class="inner">
+          <h3>风险地区统计</h3>
+          <div class="chart">
+            <div class="pie"></div>
+            <div class="data">
+              <div class="item">
+                <h4>32</h4>
+                <span>
+                  <i class="icon-dot" style="color: #ed3f35"></i>
+                  高风险地区域
+                </span>
+              </div>
+              <div class="item">
+                <h4>1418</h4>
+                <span>
+                  <i class="icon-dot" style="color: #eacf19"></i>
+                  中风险区域
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <!-- 地图模块 -->
+      <div class="map">
+        <h3>
+          <span class="icon-dot"></span>
+          2021年12月31日各地区疫情统计
+        </h3>
+        <div class="chart">
+          <div class="geo"></div>
+        </div>
+      </div>
+      <!-- 全国累积确诊模块 -->
+      <div class="users panel">
+        <div class="inner">
+          <h3>全国累计确诊</h3>
+          <div class="chart">
+            <div class="bar"></div>
+            <div class="data">
+              <div class="item">
+                <h4>1317,180</h4>
+                <span>
+                  <i class="icon-dot" style="color: #ed3f35"></i>
+                  累计确诊
+                </span>
+              </div>
+              <div class="item">
+                <h4>232</h4>
+                <span>
+                  <i class="icon-dot" style="color: #eacf19"></i>
+                  新增确诊
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <!-- 疫苗接种-->
+      <div class="order panel">
+        <div class="inner">
+          <!-- 筛选 -->
+          <div class="filter">
+            <a href="javascript:;" class="active">365天</a>
+            <a href="javascript:;">90天</a>
+            <a href="javascript:;">30天</a>
+            <a href="javascript:;">24小时</a>
+          </div>
+          <!-- 数据 -->
+          <div class="data">
+            <div class="item">
+              <h4>70%</h4>
+              <span>
+                <i class="icon-dot" style="color: #ed3f35;"></i>
+                接种完成占比
+              </span>
+            </div>
+            <div class="item">
+              <h4>9983.4</h4>
+              <span>
+                <i class="icon-dot" style="color: #eacf19;"></i>
+                接种人次(万人)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 疫苗接种统计 -->
+      <div class="sales panel">
+        <div class="inner">
+          <div class="caption">
+            <h3>疫苗接种统计</h3>
+            <a href="javascript:;" class="active" data-type="year">年</a>
+            <a href="javascript:;" data-type="quarter">季</a>
+            <a href="javascript:;" data-type="month">月</a>
+            <a href="javascript:;" data-type="week">周</a>
+          </div>
+          <div class="chart">
+            <div class="label">单位:万</div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 确诊场所分布以及季度接种进度模块 -->
+      <div class="wrap">
+        <div class="channel panel">
+          <div class="inner">
+            <h3>确诊场所分布</h3>
+            <div class="data">
+              <div class="radar"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 接种进度模块 -->
+        <div class="quarter panel">
+          <div class="inner">
+            <h3>一季度疫苗接种进度</h3>
+            <div class="chart">
+              <div class="box">
+                <div class="gauge"></div>
+                <div class="label">50<small> %</small></div>
+              </div>
+              <div class="data">
+                <div class="item">
+                  <h4>1,321</h4>
+                  <span>
+                    <i class="icon-dot" style="color: #6acca3"></i>
+                    接种人次(万人)
+                  </span>
+                </div>
+                <div class="item">
+                  <h4>150%</h4>
+                  <span>
+                    <i class="icon-dot" style="color: #ed3f35"></i>
+                    同比增长
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 疫苗接种热榜制作 -->
+      <div class="top panel">
+        <div class="inner">
+          <div class="all">
+            <h3>疫苗接种热榜</h3>
+            <ul>
+              <li>
+                <i class="icon-cup1" style="color: #d93f36;"></i>
+                北京生物
+              </li>
+              <li>
+                <i class="icon-cup2" style="color: #68d8fe;"></i>
+                安徽智飞
+              </li>
+              <li>
+                <i class="icon-cup3" style="color: #4c9bfd;"></i>
+                北京科兴
+              </li>
+            </ul>
+          </div>
+          <div class="province">
+            <h3>各省接种人次<i class="date">// 近30日 //</i></h3>
+            <div class="data">
+              <ul class="sup">
+                <!-- <li>
+                    <span>北京</span>
+                    <span>25,179 <s class="icon-up"></s></span>
+                  </li>
+                  <li>
+                    <span>河北</span>
+                    <span>23,252 <s class="icon-down"></s></span>
+                  </li> -->
+              </ul>
+              <ul class="sub">
+                <!-- <li><span></span><span> <s class="icon-up"></s></span></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <!-- 想使用中国地图必须先引用这个china.js文件 -->
+  <script src="js/china.js"></script>
+  <!-- 引入我们自己的地图js文件 -->
+  <script src="js/myMap.js"></script>
+</body>
+
+</html>
